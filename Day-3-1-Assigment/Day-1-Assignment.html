@@ -1,0 +1,270 @@
+<html>
+
+<head>
+    <title>Day-3-1</title>
+</head>
+
+<body>
+    <script>
+        console.log("Hello, LetsUpgrade Team....!!");
+        console.warn("This console is used to show the warning message");
+        console.info("I'm sending informatinal message");
+        function hello() {
+            hi();
+        }
+        function hi() {
+            console.trace();
+        }
+        console.time();
+        for (i = 0; i < 100; i++) {
+            console.log("LetsUpgrade");
+        }
+        console.timeEnd();
+
+        console.table(["C", "C++", "Java", "Python", "JavaScript"]);
+
+        console.log("Hello, I am outside a group");
+        console.group();
+        console.log("Hello, I am inside a group");
+        console.groupEnd();
+        console.log("Group is Ended")
+
+        console.log("Hello,LetsUpgrade");
+        console.groupCollapsed();
+        console.log("Hello again, this time inside a collapsed group!");
+        console.groupEnd();
+
+        console.error("This function is to print error message on console");
+
+        for (i = 0; i < 5; i++) {
+            console.count()
+        }
+
+        console.assert(document.getElementById('fcslu'), "Hey, Developer 'fcslu' ID is not exixt.")
+
+        console.clear()
+    </script>
+    <h1><u>Day-3-1 JavaScript Assignment</u></h1>
+    <h3><u>Question: 1: Explore and explain the various methods in console function Explain them Ex. console.log()
+            console.warn(). etc...
+        </u></h3>
+    <hr>
+
+    <p><strong>console.log(): -</strong>The console.log() method writes a message to the console.The console is useful
+        for testing purposes.</p>
+    <p><strong>Output for the above console.log(): -</strong>Hello, LetsUpgrade Team....!!</p>
+    <hr>
+
+    <p><strong>console.warn(): -</strong>The console.warn() method writes a warning to the console.</p>
+    <p><strong>Output for the above console.warn(): -</strong>This console is used to show the warning message</p>
+    <hr>
+
+    <p><strong>console.info(): -</strong>The console.info() method writes a message to the console.</p>
+    <p><strong>Output for the above console.info(): -</strong>I'm sending informatinal message</p>
+    <hr>
+
+    <button onclick="hello()">Click here to trace</button>
+
+    <p><strong>console.trace(): -</strong>The console.trace() method displays a trace that show how the code ended up at
+        a certain point.</p>
+    <p><strong>Output for the above console.trace(): -</strong>console.trace hi @ Day-1-Assignment.html:14</p>
+    <hr>
+
+    <p><strong>console.time() and console.timeEnd(): -</strong>The console.time() method starts a timer in the console
+        view. This method allows you to time certain operations in your code for testing purposes. Use the
+        console.timeEnd() method to end the timer and display the result in the console view.</p>
+    <p><strong>Output for the above console.time() and console.timeEnd(): - </strong>LetsUpgrade default: 25.78515625ms
+    </p>
+    <hr>
+
+    <p><strong>console.table(): -</strong>The console.table() method writes a table in the console view. The first
+        parameter is required, and must be either an object, or an array, containing data to fill the table.</p>
+    <p><strong>Output for the above console.table(): -</strong></p>
+    <table border="2">
+        <tr>
+            <th>(index)</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>"C"</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"C++"</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>"Java"</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>"Python"</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>"JavaScript"</td>
+        </tr>
+    </table>
+    <hr>
+
+    <p><strong>console.group(), console.groupEnd() and console.groupCollapsed(): -</strong>The console.group() method
+        indicates the start of a message group. All messages will from now on be written inside this group. The
+        console.groupEnd() method indicates the end of a message group. The console.groupCollapsed() method indicates
+        the start of a collapsed message group.</p>
+    <p><strong>Output for the above console.group(): -</strong>Hello, I am inside a group Hello again, this time inside
+        a collapsed group!</p>
+    <hr>
+
+    <p><strong>console.error(): -</strong>The console.error() method writes an error message to the console. The console
+        is useful for testing purposes.</p>
+    <p><strong>Output for the above console.error(): -</strong>This function is to print error message on console</p>
+    <hr>
+
+    <p><strong>console.count(): -</strong>Writes to the console the number of times that particular console.count() is
+        called. You can add a label that will be included in the console view. By default the label "default" will be
+        added.</p>
+    <p><strong>Output for the above console.count(): -</strong>default:1 2 3 4 5</p>
+    <hr>
+
+    <p><strong>console.assert(): -</strong>The console.assert() method writes a message to the console, but only if an
+        expression evaluates to false.</p>
+    <p><strong>Output for the above console.assert(): -</strong>Assertion failed: Hey, Developer 'fcslu' ID is not
+        exixt.</p>
+    <hr>
+
+    <p><strong>console.clear(): -</strong>The console.clear() method clears the console. The console.clear() method will
+        also write a message in the console: "Console was cleared".</p>
+    <p><strong>Output for the above console.clear(): -</strong>Console was cleared</p>
+    <hr>
+
+    <h3><u>Question: 2: Write the difference between var, let and const with code examples.</u></h3>
+    <h2>var</h2>
+    <p>The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of
+        that variable.</p>
+
+    <p>Ex: var i = 1;</p>
+
+    <ul>
+        <li>Variable declarations are processed before the execution of the code.</li>
+        <li>The scope of i JavaScript variable declared with var is its current execution context.</li>
+        <li>The scope of i JavaScript variable declared outside the function is global.</li>
+    </ul>
+    <script>
+        function varFunc() {
+            var i = 1;
+            console.log(i);  // output 1
+            if (true) {
+                var i = 2;
+                console.log(i); // output 2
+            }
+            console.log(i);  // output 2
+        }
+        varFunc();
+    </script>
+    <p>In the above code, you can find, when the variable is updated inside the if loop, that the value of variable "i"
+        updated 2 globally, hence outside the if loop the value persists. It is similar to the Global variable present
+        in other languages. But, be sure to use this functionality with great care because there is the possibility of
+        overriding an existing value.</p>
+    <hr>
+    <h2>let</h2>
+    <p>The let statement declares a local variable in a block scope. It is similar to var, in that we can optionally
+        initialize the variable.</p>
+    <p>Ex: let i = 1;</p>
+    <ul>
+        <li>The let statement allows you to create a variable with the scope limited to the block on which it is used.
+        </li>
+        <li>It is similar to the variable we declare in other languages like Java, .NET, etc.</li>
+    </ul>
+    <script>
+        function letFunc() {
+            let i = 1;
+            console.log(i);  // output 1
+            if (true) {
+                let i = 2;
+                console.log(i); // output 2
+            }
+            console.log(i);  // output 1
+        }
+        letFunc();
+
+        function letFunc2() {
+            let a = 10;
+            let a = 20;
+            console.log(a); //error
+        }
+        letFunc2(); 
+    </script>
+    <p>The above example throws an error called Uncaught SyntaxError: Identifier 'a' has already been declared.</p>
+    <hr>
+
+    <h2>const</h2>
+    <p>const statement values can be assigned once and they cannot be reassigned. The scope of const statement works
+        similar to let statements.</p>
+    <p>Ex: const const_var = 1</p>
+    <script>
+        function constFunc() {
+            const my_const_var = 1;
+            console.log(my_const_var); //output 1
+        }
+        constFunc();
+        function constFunc2() {
+            const my_const_var = 1;
+            console.log(my_const_var); //output 1
+            my_const_var = 2;
+            console.log(my_const_var) //error
+        }
+        constFunc2();
+    </script>
+    <p>The above example throws error called Uncaught TypeError: Assignment to constant variable at constFunc2</p>
+    <hr>
+
+    <h3><u>Question: 3: Write a brief intro on available data types in Javascript</u></h3>
+    <h2>1. Number</h2>
+    <p>The number type represents both integer and floating point numbers. There are many operations for numbers, e.g.
+        multiplication *, division /, addition +, subtraction -, and so on. Besides regular numbers, there are so-called
+        “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN.</p>
+    <hr>
+    <h2>2. BigInt</h2>
+    <p>In JavaScript, the “number” type cannot represent integer values larger than (253-1) (that’s 9007199254740991),
+        or less than -(-253-1) for negatives. It’s a technical limitation caused by their internal representation. For
+        most purposes that’s quite enough, but sometimes we need really big numbers, e.g. for cryptography or
+        microsecond-precision timestamps. BigInt type was recently added to the language to represent integers of
+        arbitrary length.</p>
+    <hr>
+    <h2>3. String</h2>
+    <p>A string in JavaScript must be surrounded by quotes. In JavaScript, there are 3 types of quotes.
+
+        1. Double quotes: "Hello".
+        2. Single quotes: 'Hello'.
+        3. Backticks: `Hello`.
+        Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
+        Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by
+        wrapping them in ${…}.</p>
+    <hr>
+    <h2>4. Boolean</h2>
+    <p>The boolean type has only two values: true and false. This type is commonly used to store yes/no values: true
+        means “yes, correct”, and false means “no, incorrect”.</p>
+    <hr>
+    <h2>5. Null</h2>
+    <p>The special null value does not belong to any of the types described above. It forms a separate type of its own
+        which contains only the null value. In JavaScript, null is not a “reference to a non-existing object” or a “null
+        pointer” like in some other languages. It’s just a special value which represents “nothing”, “empty” or “value
+        unknown”.</p>
+    <hr>
+    <h2>6. Undefined</h2>
+    <p>The special value undefined also stands apart. It makes a type of its own, just like null. The meaning of
+        undefined is “value is not assigned”. If a variable is declared, but not assigned, then its value is undefined:
+    </p>
+    <hr>
+    <h2>7. Objects</h2>
+    <p>The object type is special. All other types are called “primitive” because their values can contain only a single
+        thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and
+        more complex entities.</p>
+    <hr>
+    <h2>8. Symbols</h2>
+    <p>The symbol type is used to create unique identifiers for objects.</p>
+
+</body>
+
+</html>
