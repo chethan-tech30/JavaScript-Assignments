@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Day-2 Assignment</title>
+    </head>
+    <body>
+        <h1><u>Question 1: Write a JS code which takes input from the user and logs it in the console.
+        </u></h1>
+        <script src="js-day-2.js"></script>
+        <h3>For output refer CONSOLE</h3><hr>
+        <h1><u>Question 2: Explain with examples the remaining methods of String and Array</u></h1>
+        
+        <h2><u>String Methods in JS</u></h2>
+        
+        <p><strong>search(): -</strong> search() method searches a string for a specified value and returns the position of the match.</p>
+        <p><strong>slice(): -</strong>slice() extracts a part of a string and returns the extracted part in a new string. The method takes 2 parameters: the start position, and the end position (end not included). If a parameter is negative, the position is counted from the end of the string.</p>
+        <p><strong>substring(): -</strong>substring() is similar to slice(). The difference is that substring() cannot accept negative indexes.</p>
+        <p><strong>substr(): -</strong>substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.</p>
+        <p><strong>replace(): -</strong>The replace() method replaces a specified value with another value in a string. By default, the replace() method replaces only the first match.</p>
+        <p><strong>trim(): -</strong>The trim() method removes whitespace from both sides of a string.</p>
+        <p><strong>charCodeAt(): -</strong>The charCodeAt() method returns the unicode of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).</p>
+        <p><strong>fromCharCode(): -</strong>The fromCharCode() method converts Unicode values into characters.</p>
+        <p><strong>includes(): -</strong>The includes() method determines whether a string contains the characters of a specified string. This method returns true if the string contains the characters, and false if not.</p>      
+        <p><strong>localeCompare():- </strong>The localeCompare() method compares two strings in the current locale. The locale is based on the language settings of the browser. The localeCompare() method returns a number indicating whether the string comes before, after or is equal as the compareString in sort order.</p>
+        <p><strong>match(): -</strong>The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.</p>
+        <p><strong>repeat(): -</strong>The repeat() method returns a new string with a specified number of copies of the string it was called on.</p>
+        <p><strong>slice(): -</strong>The slice() method extracts parts of a string and returns the extracted parts in a new string. Use the start and end parameters to specify the part of the string you want to extract. The first character has the position 0, the second has position 1, and so on.</p>
+        <p><strong>startsWith(): -</strong>The startsWith() method determines whether a string begins with the characters of a specified string. This method returns true if the string begins with the characters, and false if not.</p>
+        <p><strong>toLocaleLowerCase(): -</strong>The toLocaleLowerCase() method converts a string to lowercase letters, according to the host's current locale. The locale is based on the language settings of the browser.</p>
+        <p><strong>toLocaleUpperCase(): -</strong>The toLocaleUpperCase() method converts a string to uppercase letters, according to the host's current locale. The locale is based on the language settings of the browser.</p>
+        <p><strong>toString(): -</strong>The toString() method returns the value of a String object.</p>
+        <p><strong>valueOf(): -</strong>The valueOf() method returns the primitive value of a String object.</p>
+        <h2>Please see the above all methods code in js-day-2.js and output in CONSOLE</h2>
+        
+        <h2><u>Array Methods in JS</u></h2>
+
+        <p><strong>copyWithin(): -</strong>The copyWithin() method copies array elements to another position in the array, overwriting the existing values.</p>
+        <p><strong>entries(): -</strong>The entries() method returns an Array Iterator object with key/value pairs. For each item in the original array, the new iteration object will contain an array with the index as the key, and the item value as the value</p>
+        <p><strong>every(): -</strong>
+        The every() method checks if all elements in an array pass a test (provided as a function).
+        <p>The every() method executes the function once for each element present in the array:</p>
+        <ul>
+            <li>If it finds an array element where the function returns a false value, every() returns false (and does not check the remaining values)</li>
+            <li>If no false occur, every() returns true</li>
+        </ul>
+        </p>
+        <p><strong>fill(): -</strong>The fill() method fills the specified elements in an array with a static value. You can specify the position of where to start and end the filling. If not specified, all elements will be filled.</p>
+        <p><strong>filter(): -</strong>The filter() method creates an array filled with all array elements that pass a test (provided as a function).</p>
+        <p><strong>find(): -</strong>The find() method returns the value of the first element in an array that pass a test (provided as a function).
+            <p>The find() method executes the function once for each element present in the array:</p>
+            <ul>
+                <li>If it finds an array element where the function returns a true value, find() returns the value of that array element (and does not check the remaining values).</li>
+                <li>Otherwise it returns undefined</li>
+            </ul>
+        </p>
+        <p><strong>findIndex(): -</strong>
+            The findIndex() method returns the index of the first element in an array that pass a test (provided as a function).
+            <p>The findIndex() method executes the function once for each element present in the array:</p>
+            <ul>
+                <li>If it finds an array element where the function returns a true value, findIndex() returns the index of that array element (and does not check the remaining values).</li>
+                <li>Otherwise it returns -1.</li>
+            </ul>
+        </p>
+        
+        <p><strong>forEach(): -</strong>The forEach() method calls a function once for each element in an array, in order.</p>
+        <p><strong>from(): -</strong>The Array.from() method returns an Array object from any object with a length property or an iterable object.</p>
+        <p><strong>includes(): -</strong>The includes() method determines whether an array contains a specified element.This method returns true if the array contains the element, and false if not.</p>
+        <p><strong>join(): -</strong>The join() method returns the array as a string. The elements will be separated by a specified separator. The default separator is comma (,).</p>
+        <p><strong>keys(): -</strong>The keys() method returns an Array Iterator object with the keys of an array.</p>
+        <p><strong>lastIndexOf(): -</strong>The lastIndexOf() method searches the array for the specified item, and returns its position. The search will start at the specified position, or at the end if no start position is specified, and end the search at the beginning of the array. Returns -1 if the item is not found. If the item to search for is present more than once, the lastIndexOf method returns the position of the last occurence.</p>
+        <p><strong>map(): -</strong>The map() method creates a new array with the results of calling a function for every array element. The map() method calls the provided function once for each element in an array, in order.</p>
+        <p><strong>reduce(): -</strong>The reduce() method reduces the array to a single value. The reduce() method executes a provided function for each value of the array (from left-to-right). The return value of the function is stored in an accumulator (result/total).</p>
+        <p><strong>reduceRight(): -</strong>The reduceRight() method reduces the array to a single value. The reduceRight() method executes a provided function for each value of the array (from right-to-left). The return value of the function is stored in an accumulator (result/total).</p>
+        <p><strong>slice(): -</strong>The slice() method returns the selected elements in an array, as a new array object. The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.</p>
+        <p><strong>some(): -</strong>The some() method checks if any of the elements in an array pass a test (provided as a function).
+            <p>The some() method executes the function once for each element present in the array:</p>
+            <ul>
+                <li>If it finds an array element where the function returns a true value, some() returns true (and does not check the remaining values).</li>
+                <li>Otherwise it returns false.</li>
+            </ul>
+        </p>
+        <p><strong>sort(): -</strong>The splice() method adds/removes items to/from an array, and returns the removed item(s).</p>
+        <p><strong>splice(): -</strong>The splice() method adds/removes items to/from an array, and returns the removed item(s).</p>
+        <p><strong>toString(): -</strong>The toString() method returns a string with all the array values, separated by commas.</p>
+        <p><strong>valueOf(): -</strong>The valueOf() method returns the array. This method is the default method of the array object. Array.valueOf() will return the same as Array.</p>
+
+        <h2>Please see the above all methods code in js-day-2.js and output in CONSOLE</h2><hr>
+
+        <h1><u>Question 3: Ask the user if he is 21+ and log the value "Can drink", "Cannot Drink".</u></h1>
+        <script>
+            let user = confirm("Hey user are you 21+ ?");
+            if(user===true){
+                console.log("Can Drink");
+            }
+            else{
+                console.log("Cannot Drink")
+            }
+        </script>
+        <h3>For output refer CONSOLE</h3>
+    </body>
+</html>
