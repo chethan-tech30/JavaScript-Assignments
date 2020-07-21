@@ -82,18 +82,22 @@ user1.logout();
 
 //Question 3:
 //Solution
-
 async function fetchToDos(){
     randNum = Math.floor(Math.random()*11);
-    let todos = [];
+    var todos = [];
     let completeTodos = [];
     await fetch(`https://jsonplaceholder.typicode.com/todos?_limit=${randNum}`)
       .then(res => res.json())
       .then(data => {
-          todos = console.log(data)
-          var str = JSON.stringify(data);
-          console.log(str);
+         var compData = data.filter(function(d)
+           {
+               return d.completed==true;
+              
+          });
+          console.log(JSON.stringify(compData));
       })
       .catch(err => console.log(err));
 }
 fetchToDos();
+//Output:- 
+//[{"userId":1,"id":4,"title":"et porro tempora","completed":true},{"userId":1,"id":8,"title":"quo adipisci enim quam ut ab","completed":true},{"userId":1,"id":10,"title":"illo est ratione doloremque quia maiores aut","completed":true}]
