@@ -1,6 +1,8 @@
 //Question 1:
 //Solution
 
+//Please Check all the solution by commenting one by one
+
 function backgroundColorChange() {
     var colorArray = ["gold", "chartreuse", "blueviolet", "bisque", "darkorange", "darksalmon", "dimgrey", "fuchsia", "hotpink", "powderblue"];
     var colorIndex = 0;
@@ -50,5 +52,4 @@ function changeMode() {
     darkMode.classList.toggle('dark');
 }
 
-
-
+//Please Check all the solution by commenting one by one
